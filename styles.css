@@ -1,0 +1,123 @@
+/*Determina a estilização de tudo que está dentro de body, como coloração de fundo da imagem, fonte, localização na tela, cor da fonte*/
+body { 
+    font-family: sans-serif; 
+    text-align: center; 
+    margin-top: 30px; 
+    position: relative; 
+    height: 100vh;
+    background-color: #4A1762;
+    color: #FDD94F;
+}
+/*Define o tamanho da fonte, localização e deixa em negrito a questão matemática*/
+#questao {
+    position:absolute;
+    font-size: 30px; 
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+/*Determina o tamanho da fonte, cor da fonte, cor do fundo dos "quadrados" onde aparece as respostas*/
+.resposta {
+    width: 150px; 
+    height: 100px;
+    border: 2px solid #3B0B3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    color:#3B0B3F;
+    background-color: #EFC58B;
+    border-radius: 40px;
+}
+/*Define as localizações dos "quadrados" onde aparece as alternativas*/
+#up { top: 330px; left: 50%; transform: translateX(-50%); }
+#down { top: 530px; left: 50%; transform: translateX(-50%); }
+#left { left: 450px; top:480px; transform: translateY(-50%); }
+#right { right: 450px; top:480px; transform: translateY(-50%); }
+#status { position: absolute; top: 240px; font-size: 18px; left: 50%; transform: translateX(-50%); }
+
+/*Determina a localização, a fonte, tamanho da fonte e localização das instruções*/
+.instrucoes{
+    margin-top: 180px; 
+    text-align: right;
+    justify-content:end;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-right: 20px;
+    float: right;
+}
+/*Define algumas características para a lista de instruções, como transforma as bolinhas da lista em números e a posição das "bolinhas*/
+.instrucoes li{
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+/*Determina a coloração do botão, o cursor quando passa o mouse por cima, a localização, a cor da fonte interna, a coloração da borda*/
+button{
+    border-color: #360b3a;
+    border-radius: 50px;
+    background-color: #861581;
+    color: #FDD94F;
+    font-size: 12px;
+    height: 30px;
+    width: 70px;
+    margin-top: 15px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Define a coloração da fonte da escrita interna do botão, a coloração da borda e a coloração do botão para quando o mouse é passado por cima*/
+button:hover{
+    border-color: #29082c;
+    background-color: #3B0B3F;
+    color: #a18b33;
+}
+
+/*Determina a localização e tamanho do logotipo na página inicial*/
+.logo{
+    margin-top: 30px; 
+    height: 240px;
+    width: 240px;
+}
+
+/*Define o estilo da fonte e o tamanho da frase de efeito presente na página inicial*/
+.fraseEfeito{
+    font-style: italic;
+    font-size: medium;
+}
+
+/*Determina o tamanho e localização do logotipo na página do jogo*/
+.logo2{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 180px;
+    width: 180px;
+}
+
+/*Define o tamanho e posição da frase de feedback visual*/
+#deuCerto{
+    position: absolute; 
+    top: 290px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 180px;
+    width: 250px;
+}
+
+/*Determina o tamnho e a localização do rodapé das páginas*/
+footer{
+    margin-top: 330px;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    left:0;
+    font-size: 11px;
+}

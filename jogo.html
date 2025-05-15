@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance de Centavos</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/jpg" href="src/logo2.jpg"/>
+</head>
+<body>
+  <!--Responsáveis por exibir a questão e as respostas-->
+  <!--Imagem do logotipo-->
+  <img class = "logo2"src="src/logo2.jpg">
+  <div id="questao">Carregando pergunta...</div>
+  <div class="resposta" id="up"></div>
+  <div class="resposta" id="down"></div>
+  <div class="resposta" id="left"></div>
+  <div class="resposta" id="right"></div>
+  <!--Parágrafo para exibir uma pequena instrução de jogo-->
+  <p id="status">Fale: up, down, left ou right</p>
+  <!--Responsável por exibir um feedback visual-->
+  <div id="deuCerto"></div>
+  <!--Nota de rodapé da página--> 
+  <footer>
+    <p>&copy; 2025 Performance de Centavos: Brinque, aprenda e vença — em inglês e em números!</p>
+  </footer>
+  <!--Áudios para feedback auditivo--> 
+  <audio id="acertou">
+    <source src="src/acertou.mp3" type="audio/mp3" />
+  </audio>
+
+  <audio id="errou">
+    <source src="src/errou.mp3" type="audio/mp3" />
+  </audio>
+
+  <audio id="pergunta">
+    <source src="src/pergunta.mp3" type="audio/mp3" />
+  </audio>
+  <!--Utiliza o script do arquivo 'script.js'--> 
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

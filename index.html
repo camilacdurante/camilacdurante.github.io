@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Performance de Centavos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/jpg" href="src/logo2.jpg"/>
+</head>
+
+<body>
+  <!--Imagem do logotipo e frase de efeito da página inicial--> 
+  <img class="logo" src="src/logo2.jpg">
+  <h3 class="fraseEfeito">Head, shoulders, coins e frações, na Performance de Centavos, testamos mil funções!</h3>
+  <!--Botão que redireciona o usuário para a página do jogo--> 
+  <button id="botao" class="home">Jogar</button>
+  <!--Lista de intruções para jogar--> 
+  <div class="instrucoes">
+    <p>Instruções de jogo</p>
+    <ul>
+      <li>Resolva a equação matemática que aparece na tela</li>
+      <li>Verifique em qual quadrado está a resposta correspondente</li>
+      <li>Diga a localização do quadrado (em inglês)</li>
+      <li>Torça para ser bom em matemática</li>
+      <li>Weeeeeeeeeeeeeeeeee</ul>
+      </ul>
+  </div>
+  <!--Nota de rodapé da página--> 
+  <footer>
+    <p>&copy; 2025 Performance de Centavos: Brinque, aprenda e vença — em inglês e em números!</p>
+  </footer>
+  <!--Áudio de saudação-->
+  <audio id="boasorte">
+    <source src="src/boaSorte.mp3" type="audio/mp3" />
+  </audio>
+  <!--Áudio de fundo da página-->
+  <audio id="musica" volume="0.5">
+    <source src="src/musica.mp3" type="audio/mp3" preload="auto"/>
+  </audio>
+
+  <!--Trecho de código em JavaScrip para alguns funcionamentos da página inicial-->
+  <script>
+    // Toca o áudio de fundo na página inicial
+    document.getElementById("musica").play();
+    // Quando o usuário clica no botão "Jogar"
+    document.getElementById("botao").addEventListener("click", function (e) {
+        e.preventDefault();
+        // Áudio de fundo para de tocar
+        document.getElementById("musica").pause();
+        // Áudio de saudação toca
+        document.getElementById("boasorte").play().then(() => {
+            // Quando o áudio de saudação acaba, o jogador é redirecionado para a página do jogo
+            document.getElementById("boasorte").onended = () => {
+                window.location.href = "jogo.html";
+            };
+        })
+    }); 
+  </script>
+</body>
+</html>
